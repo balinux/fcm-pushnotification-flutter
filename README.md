@@ -7,3 +7,5 @@
 
 #note
 - [android] tambahkan google-services.json di dalam folder android/app
+- [adnroid] custom sound notification link : https://stackoverflow.com/questions/54002617/custom-sound-push-notification-does-not-work-flutter
+- [stackoverflow] custom sound notification fcm: https://stackoverflow.com/questions/53531387/firebase-push-notification-with-custom-sound-flutter
