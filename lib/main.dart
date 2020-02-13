@@ -1,3 +1,4 @@
+import 'package:androidx_flutter_dev/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 
@@ -72,9 +73,8 @@ class _MyHomePageState extends State<MyHomePage> {
       },
     );
     _firebaseMessaging.requestNotificationPermissions(
-      const IosNotificationSettings(sound: true, alert:true, badge:true)
-    );
-    _firebaseMessaging.getToken().then((token){
+        const IosNotificationSettings(sound: true, alert: true, badge: true));
+    _firebaseMessaging.getToken().then((token) {
       print("token $token");
     });
     super.initState();
@@ -82,14 +82,11 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
-
         title: Text(widget.title),
       ),
       body: Center(
-
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
@@ -100,6 +97,13 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.display1,
             ),
+            RaisedButton(
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Profile()));
+              },
+              child: Text('go to Profile'),
+            )
           ],
         ),
       ),
